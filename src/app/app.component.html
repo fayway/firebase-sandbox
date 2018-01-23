@@ -1,0 +1,15 @@
+<div *ngIf="employees$ | async as employees">
+  <h1>HHM Employees</h1>
+  <ul>
+    <li *ngFor="let employee of employees">
+      {{employee.name}} / ${{employee.salary}}
+    </li>
+  </ul>
+  <div>
+    Total Employees: {{ employees.length }}
+  </div>
+  <div>
+    Total Salaries: ${{totalSalaries(employees)}}
+  </div>
+</div>
+
